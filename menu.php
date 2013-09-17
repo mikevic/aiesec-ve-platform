@@ -3,6 +3,7 @@
   if($user_details['user_level'] >= 1){
 ?>
   <b>Learn</b><br>
+  <a href="list-courses.php">Courses</a>
 <?php
   } 
   if ($user_details['user_level'] >= 2) {
@@ -14,11 +15,9 @@
   if ($user_details['user_level'] >= 3) {
 ?>
   <hr>
-  <b>Create</b>
-  <ul>
-    <li><a href="create-course.php">Create Course</a></li>
-    <li><a href="manage-course.php">Manage Course</a></li>
-  </ul>
+  <b>Create</b><br>
+    <a href="create-course.php">Create Course</a><br>
+    <a href="manage-course.php">Manage Course</a>
 <?php     
   }
 ?>

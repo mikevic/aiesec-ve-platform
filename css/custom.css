@@ -16,3 +16,27 @@ body {
 	height:100vh;
 }
 
+.mid-col {
+
+}
+
+button.module-button {
+	margin-bottom: 5px;
+}
+
+.highlight {
+  padding: 9px 14px;
+  margin-top: 14px;
+  background-color: #f7f7f9;
+  border: 1px solid #e1e1e8;
+  border-radius: 4px;
+}
+
+hr.module {
+  margin-top : 0px;
+  margin-bottom: 5px;
+  color: black;
+  background-color: black;
+  height: 1px;
+}
+

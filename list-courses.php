@@ -38,7 +38,7 @@ require 'header.php';
         			$result = mysql_query("SELECT * from course");
         			while($row = mysql_fetch_assoc($result)) {
         				echo '<tr class="active">';
-        				echo '<td>'.$row['name'].'</td>';
+        				echo '<td><a href="course.php?course='.$row['id'].'">'.$row['name'].'</td>';
         				$func_id = $row['course_func'];
         				$course_id = $row['id'];
         				$result1 = mysql_query("SELECT * from functions WHERE id=$func_id");
@@ -52,7 +52,12 @@ require 'header.php';
         				} else {
         					echo '<td></td>';
         				}
-        				echo '<td><button type="button" class="btn btn-default btn-xs subscribe-button" value="yes" id="'.$course_id.'">Subscribe</button></td>';
+        				$result3 = mysql_query("SELECT * from subscriptions WHERE course_id = $course_id AND user_id = $user_id");
+        				if(mysql_num_rows($result3) == 0){
+        					echo '<td><button type="button" class="btn btn-default btn-xs subscribe-button" value="yes" id="'.$course_id.'">Subscribe</button></td>';
+        				} else {
+        					echo '<td><button type="button" class="btn btn-default btn-xs subscribe-button" value="no" id="'.$course_id.'">Unsubscribe</button></td>';
+        				}
         				echo '</tr>';
         			}
         		?>
