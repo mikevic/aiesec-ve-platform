@@ -1,0 +1,18 @@
+body {
+  padding-top: 50px;
+  background-color: #defcff;
+}
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+
+.row {
+	height:100vh;
+}
+
+.left-col {
+	background-color:#96D151;
+	height:100vh;
+}
+
