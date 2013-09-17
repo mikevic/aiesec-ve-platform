@@ -20,13 +20,15 @@ require 'header.php';
         <?php require 'menu.php'; ?>
          </div>
 
-      <!-- Middle Col -->
+      <!--
         <div class="col-md-2 mid-col">
         boo!
         </div>
 
+      -->
+
       <!-- Right Col -->  
-        <div class="col-md-8 right-col">
+        <div class="col-md-10 right-col">
         boo!
         </div>
 

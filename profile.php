@@ -20,12 +20,12 @@ require 'header.php';
         <?php require 'menu.php'; ?>
          </div>
 
-      <!-- Middle Col -->
+      <!-- 
         <div class="col-md-2 mid-col">
         </div>
-
+      -->
       <!-- Right Col -->  
-        <div class="col-md-8 right-col">
+        <div class="col-md-10 right-col">
           <h3>Profile Settings</h3>
           <div id="form-question">
             <form role="form" id="profile-form">

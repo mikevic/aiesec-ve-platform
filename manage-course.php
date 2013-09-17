@@ -20,12 +20,13 @@ require 'header.php';
         <?php require 'menu.php'; ?>
          </div>
 
-      <!-- Middle Col -->
+      <!-- 
         <div class="col-md-2 mid-col">
         </div>
+      -->
 
       <!-- Right Col -->  
-        <div class="col-md-8 right-col">
+        <div class="col-md-10 right-col">
           <h3>Manage Course</h3>
           <?php
             if(!isset($_GET['course_id'])) {

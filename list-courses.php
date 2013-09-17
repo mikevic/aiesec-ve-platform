@@ -19,13 +19,13 @@ require 'header.php';
         <div class="col-md-2 left-col">
         <?php require 'menu.php'; ?>
          </div>
-
-      <!-- Middle Col -->
+<!--
+      
         <div class="col-md-2 mid-col">
         </div>
-
+-->
       <!-- Right Col -->  
-        <div class="col-md-8 right-col">
+        <div class="col-md-10 right-col">
         	<table class="table table-condensed">
         		<tr class="active">
         			<th>Name of Course</th>
