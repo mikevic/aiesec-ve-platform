@@ -39,7 +39,15 @@ $( ".mod_order" ).change(function() {
     var id = $(this).attr('id');
     $.post("inc/update-module-order.php", {id : id, order : order}, function(data){
         $.jGrowl("Order updated!", {position : 'bottom-right', header : "Notification"});
+    });    
+});
+
+$( "#select-quiz-type" ).change(function() {
+    var quiz_type = $(this).val();
+    var course_id = $(".course-id").val(); 
+    $.post("inc/update-quiz-type.php", {course_id : course_id, quiz_type : quiz_type}, function(data){
+        var url = "quiz-setup.php?course="+course_id;
+        $(location).attr('href',url);
     });
 
-    
 });

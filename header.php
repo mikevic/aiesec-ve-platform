@@ -1,17 +1,12 @@
 <?php
 require 'inc/dbconnect.inc.php';
 require 'inc/functions.inc.php';
+require 'inc/config.inc.php';
 
 #Get Page Information
 $currentFile = $_SERVER["PHP_SELF"];
 $parts = Explode('/', $currentFile);
 $current_page =  $parts[count($parts) - 1];
-
-########## Google Settings.. Client ID, Client Secret #############
-$google_client_id   = '724639791771.apps.googleusercontent.com';
-$google_client_secret   = '4UowJP6gOcMCFDH4Eyt0xt1D';
-$google_redirect_url    = 'http://localhost/aus/ve/';
-$google_developer_key   = 'AIzaSyDzlFyKoeGFhOOU-PK2WxMsFSfoWoI0M9s';
 
 //include google api files
 require_once 'inc/google/Google_Client.php';

@@ -1,5 +1,3 @@
-
-
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
@@ -24,6 +22,9 @@
         case 'list-courses.php':
             echo '<script type="text/javascript" src="js/list-courses.js"></script>';
             break;
+
+        case 'quiz-setup.php':
+            echo '<script type="text/javascript" src="js/quiz-setup.js"></script>';
     	
     	default:
     		# code...

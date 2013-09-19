@@ -49,6 +49,7 @@ require 'header.php';
             } else {
               $course_id = sanitize($_GET['course_id']);
           ?>
+              <input type="hidden" class="course-id" value="<?php echo $course_id; ?>">
               <div class="panel-group" id="accordion">
                 <div class="panel panel-default">
                   <div class="panel-heading">
@@ -175,6 +176,32 @@ require 'header.php';
                         }
                       ?>
                     </table>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+                        Quiz
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapseFour" class="panel-collapse collapse">
+                    <?php
+                      if($row['quiz_type']=="") {
+                    ?>
+                    <div class="panel-body">
+                      <div class="form-group">
+                        <select name="function" class="form-control" required="required" id="select-quiz-type">
+                          <option value="">Select type of quiz to implement in this course</option>
+                          <option value="basic">Basic Quiz</option>
+                          <option value="review">Review Quiz</option>
+                        </select>
+                      </div>
+                    </div>
+                    <?php
+                      }
+                    ?>
                   </div>
                 </div>
               </div>
