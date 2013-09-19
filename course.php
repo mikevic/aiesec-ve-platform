@@ -13,6 +13,10 @@ if(mysql_num_rows($result3) == 0){
   $module_details = mysql_fetch_assoc($result3);
 }
 $result = mysql_query("SELECT * from subscriptions WHERE user_id=$user_id AND course_id=$course_id");
+$next_module = $module + 1;
+$previous_module = $module - 1;
+$result4 = mysql_query("SELECT * from modules WHERE course_id=$course_id AND mod_order=$next_module");
+$result5 = mysql_query("SELECT * from modules WHERE course_id=$course_id AND mod_order=$previous_module");
 ?>
 
     <div class="container">
@@ -72,9 +76,18 @@ $result = mysql_query("SELECT * from subscriptions WHERE user_id=$user_id AND co
             <hr class="module">
             <b>Description :</b><?php echo $module_details['module_desc']; ?>
             <div>
-
+            <?php
+              if(mysql_num_rows($result5)!=0){
+            ?>
               <span class="pull-left"><button type="button" class="btn btn-primary btn-sm btn-block navigation-button"><img src="img/back.png" width="16px" class="navigation-button"><b> Back</b></button></span>
+            <?php
+              }
+              if(mysql_num_rows($result4)!=0){
+            ?>
               <span class="pull-right"><button type="button" class="btn btn-primary btn-sm btn-block navigation-button"><b>Next </b><img src="img/next.png" width="16px" class="navigation-button"></button></span>
+            <?php
+              }
+            ?>
               <br><br>
             </div>
           </div>
