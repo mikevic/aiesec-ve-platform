@@ -158,14 +158,14 @@ require 'header.php';
                       <?php
                         $result = mysql_query("SELECT * from modules WHERE course_id = $course_id ORDER BY mod_order ASC");
                         $rows = mysql_num_rows($result);
-                        while($row = mysql_fetch_assoc($result)){
+                        while($row2 = mysql_fetch_assoc($result)){
                             echo '<tr>';
-                            echo '<td>'.$row['module_name'].'</td>';
-                            echo '<td>'.$row['platform'].'</td>';
-                            echo '<td>'.$row['element_id'].'</td>';
-                            echo '<td id="'.$row['id'].'"><select class="mod_order" id="'.$row['id'].'">';
+                            echo '<td>'.$row2['module_name'].'</td>';
+                            echo '<td>'.$row2['platform'].'</td>';
+                            echo '<td>'.$row2['element_id'].'</td>';
+                            echo '<td id="'.$row2['id'].'"><select class="mod_order" id="'.$row2['id'].'">';
                             for($i = 1; $i <= $rows; $i++){
-                              if($i == $row['mod_order']) {
+                              if($i == $row2['mod_order']) {
                                 echo '<option value="'.$i.'" selected>'.$i.'</option>';
                               } else {
                                 echo '<option value="'.$i.'">'.$i.'</option>';
@@ -187,21 +187,15 @@ require 'header.php';
                     </h4>
                   </div>
                   <div id="collapseFour" class="panel-collapse collapse">
-                    <?php
-                      if($row['quiz_type']=="") {
-                    ?>
                     <div class="panel-body">
                       <div class="form-group">
                         <select name="function" class="form-control" required="required" id="select-quiz-type">
                           <option value="">Select type of quiz to implement in this course</option>
-                          <option value="basic">Basic Quiz</option>
-                          <option value="review">Review Quiz</option>
+                          <option value="basic" <?php if($row['quiz_type'] == 'basic') {echo 'selected';} ?> >Basic Quiz</option>
+                          <option value="review" <?php if($row['quiz_type'] == 'review') {echo 'selected';} ?> >Review Quiz</option>
                         </select>
                       </div>
                     </div>
-                    <?php
-                      }
-                    ?>
                   </div>
                 </div>
               </div>

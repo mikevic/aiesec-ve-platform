@@ -8,3 +8,27 @@ $( "#question-type" ).change(function() {
     	$(".para").removeClass( "hide" );
     }
 });
+
+$(".question-answer").submit(function() {
+    function reloadPage() {
+    location.reload();
+    }
+    
+    $.post("inc/add-question.php", $(this).serialize(), function(data){
+        reloadPage();
+    });
+
+    //Important. Stop the normal POST
+    return false;
+});
+
+$( ".remove-question" ).click(function() {
+    function reloadPage() {
+    location.reload();
+    }
+    var question_id = $(this).attr('id');
+    $.post("inc/remove-question.php", {question_id : question_id}, function(data){
+        reloadPage();
+    });
+
+});

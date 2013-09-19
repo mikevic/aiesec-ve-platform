@@ -79,12 +79,12 @@ $result5 = mysql_query("SELECT * from modules WHERE course_id=$course_id AND mod
             <?php
               if(mysql_num_rows($result5)!=0){
             ?>
-              <span class="pull-left"><button type="button" class="btn btn-primary btn-sm btn-block navigation-button"><img src="img/back.png" width="16px" class="navigation-button"><b> Back</b></button></span>
+              <span class="pull-left"><a href="<?php echo 'course.php?course='.$course_id.'&module='.$previous_module;?>"><button type="button" class="btn btn-primary btn-sm btn-block navigation-button"><img src="img/back.png" width="16px" class="navigation-button"><b> Back</b></button></a></span>
             <?php
               }
               if(mysql_num_rows($result4)!=0){
             ?>
-              <span class="pull-right"><button type="button" class="btn btn-primary btn-sm btn-block navigation-button"><b>Next </b><img src="img/next.png" width="16px" class="navigation-button"></button></span>
+              <span class="pull-right"><a href="<?php echo 'course.php?course='.$course_id.'&module='.$next_module;?>"><button type="button" class="btn btn-primary btn-sm btn-block navigation-button"><b>Next </b><img src="img/next.png" width="16px" class="navigation-button"></button></a></span>
             <?php
               }
             ?>
