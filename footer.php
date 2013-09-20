@@ -25,6 +25,9 @@
 
         case 'quiz-setup.php':
             echo '<script type="text/javascript" src="js/quiz-setup.js"></script>';
+
+        case 'quiz.php':
+            echo '<script type="text/JavaScript" src="js/quiz.js"></script>';
     	
     	default:
     		# code...

@@ -194,6 +194,8 @@ require 'header.php';
                           <option value="basic" <?php if($row['quiz_type'] == 'basic') {echo 'selected';} ?> >Basic Quiz</option>
                           <option value="review" <?php if($row['quiz_type'] == 'review') {echo 'selected';} ?> >Review Quiz</option>
                         </select>
+                        <br />
+                        <?php if($row['quiz_type']!='') {echo '<a href="quiz-setup.php?course='.$course_id.'">Go to Quiz</a>'; } ?>
                       </div>
                     </div>
                   </div>

@@ -25,22 +25,22 @@ if($course_details['quiz_type']=='basic' && $type!='multiple'){
 	if($answer == '1'){
 		$correct = 'yes';
 	}
-	mysql_query("INSERT into multiple_ans (question_id, option_value, correct) VALUES ($question_id, '$opt1', '$correct')");
+	mysql_query("INSERT into multiple_ans (question_id, option_value, correct, opt) VALUES ($question_id, '$opt1', '$correct', 1)");
 	$correct = 'no';
 	if($answer == '2'){
 		$correct = 'yes';
 	}
-	mysql_query("INSERT into multiple_ans (question_id, option_value, correct) VALUES ($question_id, '$opt2', '$correct')");
+	mysql_query("INSERT into multiple_ans (question_id, option_value, correct, opt) VALUES ($question_id, '$opt2', '$correct', 2)");
 	$correct = 'no';
 	if($answer == '3'){
 		$correct = 'yes';
 	}
-	mysql_query("INSERT into multiple_ans (question_id, option_value, correct) VALUES ($question_id, '$opt3', '$correct')");
+	mysql_query("INSERT into multiple_ans (question_id, option_value, correct, opt) VALUES ($question_id, '$opt3', '$correct', 3)");
 	$correct = 'no';
 	if($answer == '4'){
 		$correct = 'yes';
 	}
-	mysql_query("INSERT into multiple_ans (question_id, option_value, correct) VALUES ($question_id, '$opt4', '$correct')");
+	mysql_query("INSERT into multiple_ans (question_id, option_value, correct, opt) VALUES ($question_id, '$opt4', '$correct', 4)");
 }
 
 
