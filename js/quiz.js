@@ -1,10 +1,7 @@
 $("#quiz-form").submit(function() {
-    function reloadPage() {
-    location.reload();
-    }
-    
     $.post("inc/evaluate-quiz.php", $(this).serialize(), function(data){
-        
+        $("#form-question").slideUp();
+        $("#result").html(data);
     });
 
     //Important. Stop the normal POST
