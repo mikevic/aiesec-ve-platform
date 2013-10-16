@@ -154,6 +154,7 @@ require 'header.php';
                         <th>Platform</th>
                         <th>Element ID</th>
                         <th>Order</th>
+                        <th></th>
                       </tr>
                       <?php
                         $result = mysql_query("SELECT * from modules WHERE course_id = $course_id ORDER BY mod_order ASC");
@@ -172,6 +173,7 @@ require 'header.php';
                               }
                             }
                             echo '</td></select>';
+                            echo '<td><img src="img/x.png" width="14px" id="'.$row2['id'].'" class="remove-module"></td>';
                             echo '</tr>';
                         }
                       ?>

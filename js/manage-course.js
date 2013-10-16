@@ -51,3 +51,14 @@ $( "#select-quiz-type" ).change(function() {
     });
 
 });
+
+$( ".remove-module" ).click(function() {
+    function reloadPage() {
+        location.reload();
+    }
+    var mod_id = $(this).attr('id');
+    $.post("inc/remove-module.php", {mod_id : mod_id}, function(data){
+        reloadPage();
+    });
+
+});
