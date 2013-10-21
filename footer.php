@@ -28,6 +28,9 @@
 
         case 'quiz.php':
             echo '<script type="text/JavaScript" src="js/quiz.js"></script>';
+
+        case 'add-function.php':
+            echo '<script type="text/JavaScript" src="js/add-function.js"></script>';
     	
     	default:
     		# code...

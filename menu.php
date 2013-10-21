@@ -16,6 +16,7 @@
 ?>
   <hr>
   <b>Create</b><br>
+    <a href="add-function.php">Add Funtions</a><br>
     <a href="create-course.php">Create Course</a><br>
     <a href="manage-course.php">Manage Course</a>
 <?php     
